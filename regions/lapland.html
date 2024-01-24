@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finland Interactive Map</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../coffee.png" alt="uixcem Logo">
+            </div>
+            <div class="flag">
+                <img  src="../gipphy.gif" alt="Finland Flag">
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Weather</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="map">
+            <h3>Lapland, Finland</h3>
+            <div class="map__svg">
+                <img class="regionMap" src="../images/rovaniemi.svg" alt="" srcset="">
+                <span class="dottedLine"> <p><a href="https://www.rovaniemi.fi/">Rovaniemi </a> </p> </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener('load', () => {
+          getWeather(66.5039, 25.7294);
+           displayWeather();
+        });
+      </script>
+</body>
+</html>
