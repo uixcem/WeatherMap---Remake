@@ -87,8 +87,8 @@ nav {
         fill: #fff; }
 
 @media screen and (min-width: 1920px) {
-  .map__svg {
-    transform: scale(1.2); } }
+  .map__svg svg {
+    transform: scale(1.8); } }
 
 /* Regions */
 .regionMap {
@@ -114,7 +114,9 @@ nav {
   animation-delay: 2s; }
   .dottedLine a {
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    font-size: 3vw;
+    -webkit-text-stroke: 1px #000000; }
   .dottedLine p {
     font-size: 2vw;
     color: #ededed;
