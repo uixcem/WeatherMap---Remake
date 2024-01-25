@@ -9,7 +9,8 @@ html {
   font-family: 'Roboto', sans-serif; }
 
 body {
-  background-image: radial-gradient(circle farthest-corner at center, #3c4b57 0%, #1c262b 100%); }
+  background-image: radial-gradient(circle farthest-corner at center, #3c4b57 0%, #1c262b 100%);
+  overflow: hidden; }
 
 .container {
   width: 100%;
@@ -71,7 +72,7 @@ nav {
   .map h3 {
     position: absolute;
     top: 10vh;
-    right: 10vw;
+    right: 9vw;
     color: #fff;
     font-size: 3rem;
     font-weight: 300; }
@@ -85,12 +86,16 @@ nav {
       .map__svg path:hover {
         fill: #fff; }
 
+@media screen and (min-width: 1920px) {
+  .map__svg {
+    transform: scale(1.2); } }
+
 /* Regions */
 .regionMap {
   cursor: pointer;
   transition: all .3s ease-in-out;
   width: 45vw;
-  margin-top: 20vw;
+  margin-top: 15vw;
   margin-right: 25vw; }
   .regionMap:hover {
     transform: scale(1.1);
@@ -122,7 +127,7 @@ nav {
     visibility: hidden;
     /* Başlangıçta görünmez */
     animation: text 2s forwards;
-    animation-delay: 3s; }
+    animation-delay: 4s; }
   .dottedLine::after {
     content: '';
     font-size: 2vw;
@@ -147,3 +152,39 @@ nav {
   100% {
     opacity: 1;
     visibility: visible; } }
+
+.weather {
+  position: absolute;
+  top: 10vw;
+  right: 3vw;
+  width: 20vw;
+  height: 25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.weather-icon img {
+  width: 20vw; }
+
+.temperature-value {
+  font-size: 3vw;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 18vw; }
+
+.weather-description {
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 22vw;
+  text-transform: capitalize; }
+
+.location {
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 25vw; }
