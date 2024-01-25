@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&family=VT323&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -270,4 +272,102 @@ nav{
     font-weight: 700;
     position: absolute;
     top: 25vw;
+}
+
+
+
+.uixcem {
+    display: block;
+    position: absolute;
+    bottom: 20vw;
+    right: 1vw;
+    transform: rotate(-90deg);
+
+    &__mark {
+        font-size: 1vw;
+        color: #fff;
+        font-weight: 400;
+        text-decoration: none;
+        animation: animatedText 4s linear infinite;
+        font-family: 'Pixelify Sans', sans-serif;
+
+        &::before {
+            content: '';
+            width: 8vw;
+            height: 4vw;
+            object-fit: contain;
+            border-radius: 50%;
+            background: url(../icons/yellowBrush.png) no-repeat center/contain;
+            position: absolute;
+            top: -1.5vw;
+            right: -2vw;
+            z-index: -1;
+            
+        }
+    }
+}
+
+@keyframes animatedText {
+    1% {
+        color: #333;
+    }
+    2% {
+        color: #fff;
+    }
+    3% {
+        color: #333;
+    }
+    8% {
+        color: #fff;
+    }
+    9% {
+        color: #fff;
+    }
+    10% {
+        color: #333;
+    }
+    11% {
+        color: #fff;
+    }
+    12% {
+        color: #333;
+    }
+    44% {
+        color: #333;
+    }
+    45% {
+        color: #fff;
+    }
+    49% {
+        color: #fff;
+    }
+    50% {
+        color: #333;
+    }
+    51% {
+        color: #333;
+    }
+    52% {
+        color: #fff;
+    }
+    53% {
+        color: #333;
+    }
+
+    54% {
+        color: #fff;
+    }
+
+    55% {
+        color: #333;
+
+    }
+
+    56% {
+        color: #fff;
+    }
+
+    59% {
+        color: #fff;
+    }
 }
