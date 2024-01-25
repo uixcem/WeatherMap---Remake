@@ -256,3 +256,6 @@ nav {
     color: #fff; }
   59% {
     color: #fff; } }
+
+.modal {
+  display: none !important; }
