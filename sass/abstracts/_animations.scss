@@ -1,0 +1,97 @@
+@keyframes dotLine {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 15vw;
+        
+        
+    }
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+
+
+
+
+
+@keyframes animatedText {
+    1% {
+        color: #333;
+    }
+    2% {
+        color: #fff;
+    }
+    3% {
+        color: #333;
+    }
+    8% {
+        color: #fff;
+    }
+    9% {
+        color: #fff;
+    }
+    10% {
+        color: #333;
+    }
+    11% {
+        color: #fff;
+    }
+    12% {
+        color: #333;
+    }
+    44% {
+        color: #333;
+    }
+    45% {
+        color: #fff;
+    }
+    49% {
+        color: #fff;
+    }
+    50% {
+        color: #333;
+    }
+    51% {
+        color: #333;
+    }
+    52% {
+        color: #fff;
+    }
+    53% {
+        color: #333;
+    }
+
+    54% {
+        color: #fff;
+    }
+
+    55% {
+        color: #333;
+
+    }
+
+    56% {
+        color: #fff;
+    }
+
+    59% {
+        color: #fff;
+    }
+}
+
+
+
+

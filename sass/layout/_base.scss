@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: radial-gradient(
+    circle farthest-corner at center,
+    #3c4b57 0%,
+    #1c262b 100%
+  );
+    overflow: hidden;
+}
+
+.uixcem {
+    display: block;
+    position: absolute;
+    bottom: 20vw;
+    right: 1vw;
+    transform: rotate(-90deg);
+    
+
+    &__mark {
+        font-size: 1vw;
+        color: #fff;
+        font-weight: 400;
+        text-decoration: none;
+        animation: animatedText 4s linear infinite;
+        font-family: 'Pixelify Sans', sans-serif;
+
+        &::before {
+            content: '';
+            width: 8vw;
+            height: 4vw;
+            object-fit: contain;
+            border-radius: 50%;
+            background: url(../icons/yellowBrush.png) no-repeat center/contain;
+            position: absolute;
+            top: -1.5vw;
+            right: -2.4vw;
+            z-index: -1;
+            
+        }
+    }
+}
+
+
+.modal{
+    display: none!important;
+}
+
+
+.quickMap{
+    position: absolute;
+    bottom: 1vw;
+    left: 3vw;
+    z-index: 100;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 2vw;
+    cursor: pointer;
+    transition: ease all .3s;
+    gap: 1vw;
+
+    
+        @include responsive("small-phone") {
+          display: none;
+        }
+      
+        @include responsive("phone") {
+          display: none;
+        }
+      
+        @include responsive("tablet") {
+          display: none;
+        }
+
+    a{
+        font-size: 1vw;
+        color: #fff;
+        text-decoration: none;
+        transition: ease all .3s;
+        position: relative;
+
+        &::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: -.2vw;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #fff;
+            transition: ease all .3s;
+        }
+
+        &:hover{
+            font-size: 1.3vw;
+            transition: ease-in-out .3s;
+        }
+
+        &:hover::after{
+            width: 100%;
+            transition: ease-in-out .3s;
+        }
+    }
+
+}
