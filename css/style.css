@@ -452,7 +452,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: all ease .3s; }
+    .map__svg:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: all ease .4s; }
     .map__svg path {
       fill: #728492;
       stroke: #1c262b;
