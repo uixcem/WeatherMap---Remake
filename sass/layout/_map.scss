@@ -307,7 +307,34 @@
                             width: 60%;
                             height: 100%;}
                         }
-          
+                        
+                        .lahtiMap{
+                            @include responsive("small-phone"){
+                                width: 90%;
+                                height: 90%;
+                                align-self: flex-start;
+                                }
+                            @include responsive("phone"){
+                                width: 90%;
+                                height: 90%;
+                                align-self: flex-start;
+                                }
+                            @include responsive("tablet"){
+                                width: 90%;
+                                height: 90%;
+                                align-self: flex-start; }
+                            @include responsive("tablet-landscape"){
+                                width: 100%;
+                                height: 100%; }
+                                @include responsive("big-desktop"){
+                                    width: 60%;
+                                    height: 40%;
+                                    }
+                            @include responsive("bigger-desktop"){
+                                width: 60%;
+                                height: 100%;}
+                            }
+
                         .tampereMap{
                             @include responsive("small-phone"){
                                 width: 90%;

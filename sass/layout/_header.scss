@@ -20,7 +20,7 @@ $animationDuration: $totalDuration / 8;
 .sidebar{
     width: 20vw;
     height: 100vh;
-    background-color: #000;
+    
 
     @include responsive("small-phone"){
         display: none;}
