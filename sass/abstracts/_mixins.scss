@@ -1,0 +1,19 @@
+
+  @mixin responsive($device) {
+    @if $device == "small-phone" {
+      @media (max-width: 320px) { @content; }
+    } @else if $device == "phone" {
+      @media (min-width: 321px) and (max-width: 376px) { @content; }
+    } @else if $device == "tablet" {
+      @media (min-width: 377px) and (max-width: 600px) { @content; }
+    } @else if $device == "tablet-landscape" {
+      @media (min-width: 601px) and (max-width: 900px) { @content; }
+    } @else if $device == "desktop" {
+      @media (min-width: 901px) and (max-width: 1200px) { @content; }
+    } @else if $device == "big-desktop" {
+      @media (min-width: 1201px) and (max-width: 1600px) { @content; }
+    } @else if $device == "bigger-desktop" {
+      @media (min-width: 1601px) 
+      { @content; }
+    }
+  }

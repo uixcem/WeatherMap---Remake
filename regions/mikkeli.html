@@ -111,19 +111,22 @@
                 <img  src="../gipphy.gif" alt="Finland Flag">
             </div>
             <nav>
-                <ul class="main-nav">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Weather</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
+              <ul class="main-nav">
+                  <li><a href="../index.html">Main Map</a></li>
+              </ul>
+          </nav>
         </div>
-        
+        <div class="mobileHeader">
+          <ul>
+            <li><a href="../index.html" title="">Home</a></li>
+            <li><a href="https://cemkaplan.me" title="Cem Kaplan personal website"><img src="../coffee.png" alt="cemkaplanCoffeLogo" srcset=""></a></li>
+          </ul>
+        </div>
         <div class="map">
             <h3>Sothern Savonia</h3>
             <div class="map__svg">
-                <img class="regionMap" src="../images/mikkeli.svg" style="margin-top: 1vw;" alt="" srcset="">
-                <span class="dottedLine" style="bottom:17vw; left: 21vw;""> <p><a href="https://www.mikkeli.fi/" style="font-size: 4vw;  -webkit-text-stroke: 1px #000000;";>Mikkeli</a> </p> </span>
+                <img class="regionMap mikkeliMap" src="../images/mikkeli.svg" alt="" srcset="">
+                <span class="dottedLine" style="bottom:25vw; left: 50vw;""> <p><a href="https://www.mikkeli.fi/" >Mikkeli</a> </p> </span>
             </div>
             
             
@@ -148,7 +151,7 @@
     </div>
 
 
-
+    <footer class="quickMap"><a href="./aland.html">Åland Islands</a><a href="./joensuu.html">Joensuu</a><a href="./jyvaskula.html">Jyväskylä</a><a href="./kajani.html">Kajaani</a><a href="./kantahame.html">Hämeenlinna</a><a href="./kokkola.html">Kokkola</a><a href="./kotka.html">Kotka</a><a href="./kuopio.html">Kuopio</a><a href="./lahti.html">Lahti</a><a href="./laperanta.html">Lappeenranta</a><a href="./lapland.html">Lapland</a><a href="./mikkeli.html">Mikkeli</a><a href="./oulu.html">Oulu</a><a href="./pori.html">Pori</a><a href="./seinajoki.html">Seinäjoki</a><a href="./tampere.html">Tampere</a><a href="./turku.html">Turku</a><a href="./uusima.html">Helsinki</a><a href="./vaasa.html">Vaasa</a></footer>
     <script>
         window.addEventListener('load', () => {
           getWeather(61.6887, 27.2721);

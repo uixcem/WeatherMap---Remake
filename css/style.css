@@ -1,147 +1,4 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&family=VT323&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-html {
-  font-size: 62.5%;
-  font-family: 'Roboto', sans-serif; }
-
-body {
-  background-image: radial-gradient(circle farthest-corner at center, #3c4b57 0%, #1c262b 100%);
-  overflow: hidden; }
-
-.container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; }
-
-.sidebar {
-  width: 30vw;
-  height: 100vh; }
-
-.logo {
-  position: absolute;
-  bottom: 2.2vw;
-  left: -4vw;
-  transform: rotate(-90deg);
-  transition: ease all 1s; }
-  .logo:hover {
-    transform: rotate(90deg);
-    transform: translateX(5vw);
-    transition: ease all 1s; }
-  .logo img {
-    width: 6vw; }
-
-.flag {
-  position: absolute;
-  left: -5rem; }
-  .flag img {
-    width: 25vw; }
-
-nav {
-  position: absolute;
-  top: 25vw;
-  left: 10vw; }
-  nav ul {
-    list-style: none; }
-    nav ul li {
-      margin-bottom: 2rem; }
-      nav ul li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 3rem;
-        font-weight: 300;
-        transition: all .3s ease-in-out; }
-        nav ul li a:hover {
-          color: #fff;
-          font-weight: 500; }
-
-.map {
-  width: calc(100% - 30vw);
-  height: 100vh;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .map h3 {
-    position: absolute;
-    top: 10vh;
-    right: 9vw;
-    color: #fff;
-    font-size: 2.5vw;
-    font-weight: 300; }
-  .map__svg {
-    transform: scale(0.8); }
-    .map__svg path {
-      fill: #728492;
-      stroke: #1c262b;
-      stroke-width: 1px;
-      transition: fill 0.5s; }
-      .map__svg path:hover {
-        fill: #fff; }
-
-@media screen and (min-width: 1920px) {
-  .map__svg svg {
-    transform: scale(1.8); } }
-
-/* Regions */
-.regionMap {
-  cursor: pointer;
-  transition: all .3s ease-in-out;
-  width: 45vw;
-  margin-top: 15vw;
-  margin-right: 25vw; }
-  .regionMap:hover {
-    transform: scale(1.1);
-    transition: all .3s ease-in-out; }
-
-.dottedLine {
-  width: .1vw;
-  height: 0;
-  background-color: transparent;
-  border-left: 1vw dashed #333;
-  position: absolute;
-  bottom: 10vw;
-  right: 60vw;
-  animation: dotLine 2s normal;
-  animation-fill-mode: forwards;
-  animation-delay: 2s; }
-  .dottedLine a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 3vw;
-    -webkit-text-stroke: 1px #000000; }
-  .dottedLine p {
-    font-size: 2vw;
-    color: #ededed;
-    font-weight: 700;
-    position: absolute;
-    bottom: 15.7vw;
-    right: 3vw;
-    opacity: 0;
-    /* Başlangıçta görünmez */
-    visibility: hidden;
-    /* Başlangıçta görünmez */
-    animation: text 2s forwards;
-    animation-delay: 4s; }
-  .dottedLine::after {
-    content: '';
-    font-size: 2vw;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 50%;
-    background-color: red;
-    position: absolute;
-    top: -3vw;
-    left: -2vw; }
-
 @keyframes dotLine {
   0% {
     height: 0; }
@@ -155,67 +12,6 @@ nav {
   100% {
     opacity: 1;
     visibility: visible; } }
-
-.weather {
-  position: absolute;
-  top: 10vw;
-  right: 3vw;
-  width: 20vw;
-  height: 25vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
-
-.weather-icon img {
-  width: 20vw; }
-
-.temperature-value {
-  font-size: 3vw;
-  color: #fff;
-  font-weight: 700;
-  position: absolute;
-  top: 18vw; }
-
-.weather-description {
-  font-size: 2vw;
-  color: #fff;
-  font-weight: 700;
-  position: absolute;
-  top: 22vw;
-  text-transform: capitalize; }
-
-.location {
-  font-size: 2vw;
-  color: #fff;
-  font-weight: 700;
-  position: absolute;
-  top: 25vw; }
-
-.uixcem {
-  display: block;
-  position: absolute;
-  bottom: 20vw;
-  right: 1vw;
-  transform: rotate(-90deg); }
-  .uixcem__mark {
-    font-size: 1vw;
-    color: #fff;
-    font-weight: 400;
-    text-decoration: none;
-    animation: animatedText 4s linear infinite;
-    font-family: 'Pixelify Sans', sans-serif; }
-    .uixcem__mark::before {
-      content: '';
-      width: 8vw;
-      height: 4vw;
-      object-fit: contain;
-      border-radius: 50%;
-      background: url(../icons/yellowBrush.png) no-repeat center/contain;
-      position: absolute;
-      top: -1.5vw;
-      right: -2.4vw;
-      z-index: -1; }
 
 @keyframes animatedText {
   1% {
@@ -257,5 +53,738 @@ nav {
   59% {
     color: #fff; } }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif; }
+
+body {
+  background-image: radial-gradient(circle farthest-corner at center, #3c4b57 0%, #1c262b 100%);
+  overflow: hidden; }
+
+.uixcem {
+  display: block;
+  position: absolute;
+  bottom: 20vw;
+  right: 1vw;
+  transform: rotate(-90deg); }
+  .uixcem__mark {
+    font-size: 1vw;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    animation: animatedText 4s linear infinite;
+    font-family: 'Pixelify Sans', sans-serif; }
+    .uixcem__mark::before {
+      content: '';
+      width: 8vw;
+      height: 4vw;
+      object-fit: contain;
+      border-radius: 50%;
+      background: url(../icons/yellowBrush.png) no-repeat center/contain;
+      position: absolute;
+      top: -1.5vw;
+      right: -2.4vw;
+      z-index: -1; }
+
 .modal {
   display: none !important; }
+
+.quickMap {
+  position: absolute;
+  bottom: 1vw;
+  left: 3vw;
+  z-index: 100;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 2vw;
+  cursor: pointer;
+  transition: ease all .3s;
+  gap: 1vw; }
+  @media (max-width: 320px) {
+    .quickMap {
+      display: none; } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .quickMap {
+      display: none; } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .quickMap {
+      display: none; } }
+  .quickMap a {
+    font-size: 1vw;
+    color: #fff;
+    text-decoration: none;
+    transition: ease all .3s;
+    position: relative; }
+    .quickMap a::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      bottom: -.2vw;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      transition: ease all .3s; }
+    .quickMap a:hover {
+      font-size: 1.3vw;
+      transition: ease-in-out .3s; }
+    .quickMap a:hover::after {
+      width: 100%;
+      transition: ease-in-out .3s; }
+
+#textContainer p {
+  display: none; }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: 5vw;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden; }
+
+.sidebar {
+  width: 20vw;
+  height: 100vh;
+  background-color: #000; }
+  @media (max-width: 320px) {
+    .sidebar {
+      display: none; } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .sidebar {
+      display: none; } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .sidebar {
+      display: none; } }
+
+.pBox {
+  position: relative;
+  top: 22vw;
+  left: 7vw;
+  width: 30vw;
+  height: 15vw;
+  background-color: #fff;
+  border-radius: 2rem 0 2rem 0;
+  padding: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 320px) {
+    .pBox {
+      opacity: 0; } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .pBox {
+      opacity: 0; } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .pBox {
+      opacity: 0; } }
+  @media (min-width: 601px) and (max-width: 900px) {
+    .pBox {
+      top: 30rem;
+      left: 10vw;
+      width: 40vw;
+      height: 20vw; } }
+  .pBox p {
+    width: 90%;
+    z-index: 2;
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: #000; }
+    .pBox p .quote-mark {
+      font-size: 1vw;
+      font-weight: 300;
+      color: RED; }
+  .pBox h3 {
+    position: absolute;
+    z-index: 1;
+    font-size: 2.5vw;
+    font-weight: 500;
+    bottom: 0.5vw;
+    left: 1.5vw; }
+
+.logo {
+  position: absolute;
+  bottom: 2.2vw;
+  left: -4vw;
+  transform: rotate(-90deg);
+  transition: ease all 1s; }
+  @media (max-width: 320px) {
+    .logo {
+      display: none; } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .logo {
+      display: none; } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .logo {
+      display: none; } }
+  .logo:hover {
+    transform: rotate(90deg);
+    transform: translateX(5vw);
+    transition: ease all 1s; }
+  .logo img {
+    width: 6vw; }
+
+.flag {
+  position: absolute;
+  left: -5rem; }
+  @media (max-width: 320px) {
+    .flag {
+      display: none; } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .flag {
+      display: none; } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .flag {
+      display: none; } }
+  .flag img {
+    width: 25vw; }
+
+nav {
+  position: absolute;
+  top: 25vw;
+  left: 10vw; }
+  @media (max-width: 320px) {
+    nav {
+      display: none; } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    nav {
+      display: none; } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    nav {
+      display: none; } }
+  nav ul.main-nav {
+    list-style: none; }
+    nav ul.main-nav li {
+      margin-bottom: 2rem; }
+      nav ul.main-nav li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 300;
+        transition: all .3s ease-in-out;
+        position: relative; }
+        nav ul.main-nav li a::before {
+          content: "";
+          position: absolute;
+          background: url(/images/arrowWhite.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          bottom: -1vw;
+          left: -3vw;
+          transform: rotate(180deg);
+          width: 13vw;
+          height: 1.4vw;
+          transition: all .3s ease-in-out; }
+        nav ul.main-nav li a:hover::before {
+          left: -5vw; }
+
+.finlandMap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; }
+  @media (max-width: 320px) {
+    .finlandMap__svg {
+      transform: scale(0.7); } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .finlandMap__svg {
+      transform: scale(0.8); } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .finlandMap__svg {
+      transform: scale(0.8); } }
+  @media (min-width: 601px) and (max-width: 900px) {
+    .finlandMap__svg {
+      transform: scale(0.6); } }
+  @media (min-width: 1201px) and (max-width: 1600px) {
+    .finlandMap__svg {
+      transform: scale(0.8); } }
+  @media (min-width: 1601px) {
+    .finlandMap__svg {
+      transform: scale(1.5); } }
+  .finlandMap__svg path {
+    fill: #728492;
+    stroke: #1c262b;
+    stroke-width: 1px;
+    transition: fill 0.5s; }
+    .finlandMap__svg path:hover {
+      fill: #fff; }
+
+/*Mobile Map */
+.mobileHeader {
+  display: none; }
+  @media (max-width: 320px) {
+    .mobileHeader {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      overflow: hidden;
+      align-items: center;
+      width: 100%;
+      height: 10vh;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .mobileHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 100%;
+      height: 10vh;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .mobileHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 100%;
+      height: 10vh;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); } }
+  .mobileHeader ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+    list-style: none; }
+    .mobileHeader ul li {
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer; }
+      .mobileHeader ul li a {
+        text-decoration: none;
+        color: #333; }
+      .mobileHeader ul li img {
+        width: 5rem;
+        height: 5rem; }
+
+.map {
+  margin-top: 10vh;
+  width: calc(100% - 30vw);
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0; }
+  @media (max-width: 320px) {
+    .map {
+      width: 100%;
+      height: calc(100% - 10vh);
+      flex-direction: column;
+      gap: 5rem; } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .map {
+      width: 100%;
+      height: calc(100% - 10vh);
+      flex-direction: column;
+      gap: 3rem; } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .map {
+      width: 100%;
+      height: calc(100% - 10vh);
+      flex-direction: column;
+      gap: 5rem; } }
+  @media (min-width: 1201px) and (max-width: 1600px) {
+    .map {
+      width: 100%;
+      height: 90%; } }
+  @media (min-width: 1601px) {
+    .map {
+      width: 100%;
+      height: 90%;
+      justify-content: space-around; } }
+  .map h3 {
+    color: #fff;
+    width: 100%;
+    font-size: 2.5vw;
+    font-weight: 600;
+    text-align: center; }
+    @media (max-width: 320px) {
+      .map h3 {
+        font-size: 3rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map h3 {
+        font-size: 4rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map h3 {
+        font-size: 10vw; } }
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      .map h3 {
+        font-size: 7vw;
+        position: absolute;
+        top: 1vw;
+        left: -2vw;
+        text-align: right; } }
+    @media (min-width: 1601px) {
+      .map h3 {
+        font-size: 7.5vw;
+        position: absolute;
+        top: 1vw;
+        text-align: right;
+        right: 2vw; } }
+  .map__svg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; }
+    .map__svg path {
+      fill: #728492;
+      stroke: #1c262b;
+      stroke-width: 1px;
+      transition: fill 0.5s; }
+      .map__svg path:hover {
+        fill: #fff; }
+    @media (max-width: 320px) {
+      .map__svg .jyvaskulaMap {
+        width: 90%;
+        height: 100%;
+        align-self: flex-start; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .jyvaskulaMap {
+        width: 70%;
+        height: 100%;
+        align-self: flex-start; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .jyvaskulaMap {
+        width: 90%;
+        height: 100%;
+        align-self: flex-start; } }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .map__svg .jyvaskulaMap {
+        width: 100%;
+        height: 100%; } }
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      .map__svg .jyvaskulaMap {
+        width: 60%;
+        height: 40%; } }
+    @media (min-width: 1601px) {
+      .map__svg .jyvaskulaMap {
+        width: 60%;
+        height: 100%; } }
+    @media (max-width: 320px) {
+      .map__svg .vaasaMap {
+        width: 90%;
+        height: 100%;
+        align-self: flex-start; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .vaasaMap {
+        width: 90%;
+        height: 100%;
+        align-self: flex-start; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .vaasaMap {
+        width: 90%;
+        height: 100%;
+        align-self: flex-start; } }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .map__svg .vaasaMap {
+        width: 100%;
+        height: 100%; } }
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      .map__svg .vaasaMap {
+        width: 60%;
+        height: 40%; } }
+    @media (min-width: 1601px) {
+      .map__svg .vaasaMap {
+        width: 60%;
+        height: 100%; } }
+    @media (max-width: 320px) {
+      .map__svg .poriMap {
+        width: 90%;
+        height: 80%;
+        align-self: flex-start; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .poriMap {
+        width: 80%;
+        height: 80%;
+        align-self: flex-start; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .poriMap {
+        width: 90%;
+        height: 100%;
+        align-self: flex-start; } }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .map__svg .poriMap {
+        width: 100%;
+        height: 100%; } }
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      .map__svg .poriMap {
+        width: 60%;
+        height: 40%; } }
+    @media (min-width: 1601px) {
+      .map__svg .poriMap {
+        width: 60%;
+        height: 100%; } }
+    @media (max-width: 320px) {
+      .map__svg .kuopioMap {
+        width: 90%;
+        height: 90%;
+        align-self: flex-start; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .kuopioMap {
+        width: 90%;
+        height: 90%;
+        align-self: flex-start; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .kuopioMap {
+        width: 90%;
+        height: 90%;
+        align-self: flex-start; } }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .map__svg .kuopioMap {
+        width: 100%;
+        height: 100%; } }
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      .map__svg .kuopioMap {
+        width: 60%;
+        height: 40%; } }
+    @media (min-width: 1601px) {
+      .map__svg .kuopioMap {
+        width: 60%;
+        height: 100%; } }
+    @media (max-width: 320px) {
+      .map__svg .tampereMap {
+        width: 90%;
+        height: 90%;
+        align-self: flex-start; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .tampereMap {
+        width: 90%;
+        height: 90%;
+        align-self: flex-start; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .tampereMap {
+        width: 90%;
+        height: 90%;
+        align-self: flex-start; } }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .map__svg .tampereMap {
+        width: 100%;
+        height: 100%; } }
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      .map__svg .tampereMap {
+        width: 60%;
+        height: 40%; } }
+    @media (min-width: 1601px) {
+      .map__svg .tampereMap {
+        width: 60%;
+        height: 100%; } }
+    @media (max-width: 320px) {
+      .map__svg .regionMap {
+        width: 90%;
+        height: 100%;
+        align-self: flex-start; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .regionMap {
+        width: 90%;
+        height: 100%; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .regionMap {
+        width: 90%;
+        height: 100%;
+        align-self: flex-start; } }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .map__svg .regionMap {
+        width: 100%;
+        height: 100%; } }
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      .map__svg .regionMap {
+        width: 100%;
+        height: 100%; } }
+    @media (min-width: 1601px) {
+      .map__svg .regionMap {
+        width: 100%;
+        height: 100%; } }
+
+/* Regions */
+.dottedLine {
+  width: .1vw;
+  height: 0;
+  background-color: transparent;
+  border-left: 1vw dashed #333;
+  position: absolute;
+  animation: dotLine 2s normal;
+  animation-fill-mode: forwards;
+  animation-delay: 2s; }
+  @media (min-width: 1601px) {
+    .dottedLine {
+      left: 15rem;
+      bottom: 12rem; } }
+  .dottedLine a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 3vw;
+    -webkit-text-stroke: 1px #000000; }
+    @media (max-width: 320px) {
+      .dottedLine a {
+        font-size: 2rem;
+        position: absolute;
+        left: -3rem;
+        bottom: 1.3rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .dottedLine a {
+        font-size: 2rem;
+        font-weight: 700;
+        position: absolute;
+        left: -3rem;
+        bottom: 1.3rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .dottedLine a {
+        font-size: 3rem;
+        font-weight: 700;
+        position: absolute;
+        left: 2rem;
+        bottom: -2rem; } }
+  .dottedLine p {
+    font-size: 2vw;
+    color: #ededed;
+    font-weight: 700;
+    position: absolute;
+    bottom: 15.7vw;
+    right: 3vw;
+    opacity: 0;
+    visibility: hidden;
+    animation: text 2s forwards;
+    animation-delay: 4s; }
+  .dottedLine::after {
+    content: '';
+    font-size: 2vw;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: -3vw;
+    left: -2vw; }
+
+.weather {
+  width: 100%;
+  height: 25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  @media (max-width: 320px) {
+    .weather {
+      margin-top: 1rem; } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .weather {
+      margin-top: 4rem; } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .weather {
+      margin-top: -2rem; } }
+  @media (min-width: 1201px) and (max-width: 1600px) {
+    .weather {
+      margin-bottom: 13vw; } }
+  @media (min-width: 1601px) {
+    .weather {
+      width: 40%;
+      justify-content: flex-start; } }
+  .weather .weather-icon img {
+    width: 20vw; }
+    @media (max-width: 320px) {
+      .weather .weather-icon img {
+        width: 15rem;
+        position: absolute;
+        z-index: -1;
+        top: 35rem;
+        left: 5rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .weather .weather-icon img {
+        width: 30rem;
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        opacity: 0.6;
+        right: 0; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .weather .weather-icon img {
+        width: 30rem;
+        position: absolute;
+        z-index: -1;
+        bottom: 0rem;
+        opacity: 0.9;
+        left: 6rem; } }
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      .weather .weather-icon img {
+        width: 35vw;
+        position: absolute;
+        top: 16vw;
+        right: 1rem; } }
+    @media (min-width: 1601px) {
+      .weather .weather-icon img {
+        width: 40vw;
+        position: absolute;
+        top: 25vw;
+        right: 2vw; } }
+  .weather .temperature-value {
+    text-align: center;
+    font-size: 3vw;
+    color: #fff;
+    font-weight: 700; }
+    @media (max-width: 320px) {
+      .weather .temperature-value {
+        font-size: 4rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .weather .temperature-value {
+        font-size: 6rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .weather .temperature-value {
+        font-size: 5rem; } }
+  .weather .weather-description {
+    font-size: 2vw;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center; }
+    @media (max-width: 320px) {
+      .weather .weather-description {
+        font-size: 2rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .weather .weather-description {
+        font-size: 2.5rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .weather .weather-description {
+        font-size: 2.5rem; } }
+  .weather .location {
+    font-size: 2vw;
+    color: #fff;
+    font-weight: 700;
+    text-align: center; }
+    @media (max-width: 320px) {
+      .weather .location {
+        font-size: 2rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .weather .location {
+        font-size: 2rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .weather .location {
+        font-size: 2rem; } }

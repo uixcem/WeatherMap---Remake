@@ -10,23 +10,35 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <div class="logo">
-                <img src="coffee.png" alt="uixcem Logo">
-            </div>
-            <div class="flag">
-                <img  src="gipphy.gif"  alt="Finland Flag">
-            </div>
-            <nav>
+          <div class="logo">
+              <img src="coffee.png" alt="uixcem Logo">
+          </div>
+            
+          <div class="flag">
+              <img  src="gipphy.gif"  alt="Finland Flag">
+          </div>
+
+          <div class="pBox" id="textContainer">
+            <p><span class="quoteMark">&#x275D</span> Finland created a National Failure Day in 2010. It certainly sounds weird, yet it makes sense as it permits Finnish people to learn from their mistakes and not repeat them. It's celebrated each year on October 13th.<span class="quoteMark">&#x275e</span></p> 
+            <p><span class="quoteMark">&#x275D</span>With an average of 12 kg per year, Finnish people drink more coffee per person than anyone else in the world.<span class="quoteMark">&#x275e</span></p>
+            <p><span class="quoteMark">&#x275D</span>Finland hosts a whole bunch of odd competitions, including wife carrying, mobile phone throwing, air guitar and boot throwing.<span class="quoteMark">&#x275e</span></p>
+            <p><span class="quoteMark">&#x275D</span>Finland has been ranked for years among the 5 best countries in the world for its excellent education system.<span class="quoteMark">&#x275e</span></p>
+            <p><span class="quoteMark">&#x275D</span>In Finland, traffic violation fines depend on how much you earn: in 2002 a man was fined 116,000EUR – he had a yearly income of 7 million.<span class="quoteMark">&#x275e</span></p>
+            <p><span class="quoteMark">&#x275D</span>In Finland, it’s the norm to have a sauna in your house... and to jump in a lake after you've had one, even in the harsh winter.<span class="quoteMark">&#x275e</span></p>
+            <p><span class="quoteMark">&#x275D</span>In Finland, it’s the norm to have a sauna in your house... and to jump in a lake after you've had one, even in the harsh winter.<span class="quoteMark">&#x275e</span></p>
+            <p><span class="quoteMark">&#x275D</span>In Finland, it’s the norm to have a sauna in your house... and to jump in a lake after you've had one, even in the harsh winter.<span class="quoteMark">&#x275e</span></p>
+          </div>
+            <!-- <nav>
                 <ul class="main-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="https://openweathermap.org/" target="_blank">Weather</a></li>
                     <li><a href="https://cemkaplan.me/" target="_blank">About</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
         
-        <div class="map">
-            <div class="map__svg">
+        <div class="finlandMap">
+            <div class="finlandMap__svg">
                 <svg
         xmlns:mapsvg="http://mapsvg.com"
         xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -215,6 +227,28 @@
       <a href="https://cemkaplan.me/" class="uixcem__mark">uixcem</a>
     </footer>
 
+
+
+    <script>
+      let currentIndex = 0;
+      const paragraphs = document.querySelectorAll('#textContainer p');
+      const totalParagraphs = paragraphs.length;
+
+      function showParagraph(index) {
+        paragraphs.forEach((p, i) => {
+          p.style.display = i === index ? 'block' : 'none';
+        });
+      }
+
+      function nextParagraph() {
+        currentIndex = (currentIndex + 1) % totalParagraphs;
+        showParagraph(currentIndex);
+      }
+
+      showParagraph(currentIndex);
+      setInterval(nextParagraph, 10000); 
+
+    </script>
 </body>
 </html>
 

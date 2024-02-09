@@ -1,0 +1,577 @@
+.finlandMap{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+    &__svg{
+        @include responsive("small-phone"){
+            transform: scale(.7);}
+        @include responsive("phone"){
+            transform: scale(.8);}
+        @include responsive("tablet"){
+            transform: scale(.8);}
+        @include responsive("tablet-landscape"){
+            transform: scale(.6);}
+        @include responsive("big-desktop"){
+            transform: scale(.8);}
+       @include responsive("bigger-desktop"){
+            transform: scale(1.5);} 
+        
+        path {
+            fill: #728492;
+            stroke: #1c262b;
+            stroke-width: 1px;
+            transition: fill 0.5s;
+
+            &:hover{
+                fill: #fff;
+            }
+
+          }
+
+    }
+}
+
+
+/*Mobile Map */
+
+.mobileHeader{
+    display: none;
+    @include responsive("small-phone"){
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        overflow: hidden;
+        align-items: center;
+        width: 100%;
+        height: 10vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    }
+    @include responsive("phone"){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        height: 10vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    }
+    @include responsive("tablet"){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        height: 10vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 2rem;
+        list-style: none;
+        li{
+            font-size: 2rem;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+
+            a{
+                text-decoration: none;
+                color: #333;
+            }
+
+            img{
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+    }
+}
+
+.map{
+    margin-top: 10vh;
+    width: calc(100% - 30vw);
+    height:100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    
+
+    @include responsive("small-phone"){
+        width: 100%;
+        height:calc(100% - 10vh);
+        flex-direction: column;
+        gap: 5rem;
+        }
+    @include responsive("phone"){
+        width: 100%;
+        height:calc(100% - 10vh);
+        flex-direction: column;
+        gap: 3rem;
+        }
+    @include responsive("tablet"){
+        width: 100%;
+        height:calc(100% - 10vh);
+        flex-direction: column;
+        gap: 5rem;
+        }
+    @include responsive("big-desktop"){
+        width: 100%;
+        height: 90%;}
+    @include responsive("bigger-desktop"){
+        width: 100%;
+        height: 90%;
+        justify-content: space-around;} 
+
+    h3{
+        color: #fff;
+        width: 100%;
+        font-size: 2.5vw;
+        font-weight: 600;
+        text-align: center;
+
+        @include responsive("small-phone"){
+            font-size: 3rem;
+            }
+        @include responsive("phone"){
+            font-size: 4rem;
+            }
+        @include responsive("tablet"){
+            font-size:10vw;
+            }
+        @include responsive("big-desktop"){
+            font-size: 7vw;
+            position: absolute;
+            top: 1vw;
+            left: -2vw;
+            text-align: right;}
+        @include responsive("bigger-desktop"){
+            font-size: 7.5vw;
+            position: absolute;
+            top: 1vw;
+            text-align: right;
+            right: 2vw;} 
+        
+    }
+  
+    
+
+    &__svg{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+
+
+
+        
+        path {
+            fill: #728492;
+            stroke: #1c262b;
+            stroke-width: 1px;
+            transition: fill 0.5s;
+
+            &:hover{
+                fill: #fff;
+            }
+
+          }
+        
+
+          .jyvaskulaMap{
+            @include responsive("small-phone"){
+                width: 90%;
+                height: 100%;
+                align-self: flex-start;
+                }
+            @include responsive("phone"){
+                width: 70%;
+                height: 100%;
+                align-self: flex-start;
+                }
+            @include responsive("tablet"){
+                width: 90%;
+                height: 100%;
+                align-self: flex-start; }
+            @include responsive("tablet-landscape"){
+                width: 100%;
+                height: 100%; }
+                @include responsive("big-desktop"){
+                    width: 60%;
+                    height: 40%;
+                    }
+            @include responsive("bigger-desktop"){
+                width: 60%;
+                height: 100%;}
+            }
+
+            .vaasaMap{
+                @include responsive("small-phone"){
+                    width: 90%;
+                    height: 100%;
+                    align-self: flex-start;
+                    }
+                @include responsive("phone"){
+                    width: 90%;
+                    height: 100%;
+                    align-self: flex-start;
+                    }
+                @include responsive("tablet"){
+                    width: 90%;
+                    height: 100%;
+                    align-self: flex-start; }
+                @include responsive("tablet-landscape"){
+                    width: 100%;
+                    height: 100%; }
+                    @include responsive("big-desktop"){
+                        width: 60%;
+                        height: 40%;
+                        }
+                @include responsive("bigger-desktop"){
+                    width: 60%;
+                    height: 100%;}
+                }
+
+                .poriMap{
+                    @include responsive("small-phone"){
+                        width: 90%;
+                        height: 80%;
+                        align-self: flex-start;
+                        }
+                    @include responsive("phone"){
+                        width: 80%;
+                        height: 80%;
+                        align-self: flex-start;
+                        }
+                    @include responsive("tablet"){
+                        width: 90%;
+                        height: 100%;
+                        align-self: flex-start; }
+                    @include responsive("tablet-landscape"){
+                        width: 100%;
+                        height: 100%; }
+                        @include responsive("big-desktop"){
+                            width: 60%;
+                            height: 40%;
+                            }
+                    @include responsive("bigger-desktop"){
+                        width: 60%;
+                        height: 100%;}
+                    }
+          
+                    .kuopioMap{
+                        @include responsive("small-phone"){
+                            width: 90%;
+                            height: 90%;
+                            align-self: flex-start;
+                            }
+                        @include responsive("phone"){
+                            width: 90%;
+                            height: 90%;
+                            align-self: flex-start;
+                            }
+                        @include responsive("tablet"){
+                            width: 90%;
+                            height: 90%;
+                            align-self: flex-start; }
+                        @include responsive("tablet-landscape"){
+                            width: 100%;
+                            height: 100%; }
+                            @include responsive("big-desktop"){
+                                width: 60%;
+                                height: 40%;
+                                }
+                        @include responsive("bigger-desktop"){
+                            width: 60%;
+                            height: 100%;}
+                        }
+          
+                        .tampereMap{
+                            @include responsive("small-phone"){
+                                width: 90%;
+                                height: 90%;
+                                align-self: flex-start;
+                                }
+                            @include responsive("phone"){
+                                width: 90%;
+                                height: 90%;
+                                align-self: flex-start;
+                                }
+                            @include responsive("tablet"){
+                                width: 90%;
+                                height: 90%;
+                                align-self: flex-start; }
+                            @include responsive("tablet-landscape"){
+                                width: 100%;
+                                height: 100%; }
+                                @include responsive("big-desktop"){
+                                    width: 60%;
+                                    height: 40%;
+                                    }
+                            @include responsive("bigger-desktop"){
+                                width: 60%;
+                                height: 100%;}
+                            }
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                .regionMap{
+
+            @include responsive("small-phone"){
+                width: 90%;
+                height: 100%;
+                align-self: flex-start;
+                }
+            @include responsive("phone"){
+                width: 90%;
+                height: 100%;
+                }
+            @include responsive("tablet"){
+                width: 90%;
+                height: 100%;
+                align-self: flex-start; }
+            @include responsive("tablet-landscape"){
+                width: 100%;
+                height: 100%; }
+            @include responsive("big-desktop"){
+                width: 100%;
+                height: 100%;}
+            @include responsive("bigger-desktop"){
+                width: 100%;
+                height: 100%;} }
+            
+            
+            
+                
+            
+            }}
+
+  
+
+
+
+/* Regions */
+
+
+.dottedLine{
+    width: .1vw;
+    height: 0;
+    background-color: transparent;
+    border-left: 1vw dashed #333;
+    position: absolute;
+    animation: dotLine 2s normal;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    // @include responsive("small-phone"){
+    //     bottom: 8rem;
+    //     left: 10rem;}
+    // @include responsive("phone"){
+    //     left: 13rem;
+    //     bottom: 10rem;}
+    @include responsive("bigger-desktop"){
+        left: 15rem;
+      bottom: 12rem;}
+
+    
+
+    a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 3vw;
+        -webkit-text-stroke: 1px #000000;
+        @include responsive("small-phone"){
+            font-size: 2rem;
+            position: absolute;
+            left: -3rem;
+            bottom:1.3rem;}
+        @include responsive("phone"){
+            font-size: 2rem;
+            font-weight: 700;
+            position: absolute;
+            left: -3rem;
+            bottom:1.3rem;}
+        @include responsive("tablet"){
+            font-size: 3rem;
+            font-weight: 700;
+            position: absolute;
+            left: 2rem;
+            bottom: -2rem;}
+    }
+
+    p{
+        font-size: 2vw;
+        color: #ededed;
+        font-weight: 700;
+        position: absolute;
+        bottom: 15.7vw;
+        right: 3vw;
+        opacity: 0; 
+        visibility: hidden;
+        animation: text 2s forwards;
+        animation-delay: 4s;
+        
+        
+    }
+
+
+    &::after{
+        content: '';
+        font-size: 2vw;
+        width: 3vw;
+        height: 3vw;
+        border-radius: 50%;
+        background-color: red;
+        position: absolute;
+        top: -3vw;
+        left: -2vw;
+        
+    }
+
+    
+
+}
+
+
+
+.weather{
+    width: 100%;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    @include responsive("small-phone"){ 
+        margin-top:1rem ;}
+    @include responsive("phone"){
+        margin-top:4rem ;}
+    @include responsive("tablet"){
+        margin-top: -2rem ;}
+    @include responsive("big-desktop"){
+        margin-bottom: 13vw;}
+    @include responsive("bigger-desktop"){
+        width: 40%;
+        justify-content: flex-start;}   
+
+.weather-icon{
+    
+    img{
+        width: 20vw;
+        @include responsive("small-phone"){
+            width: 15rem;
+            position: absolute;
+            z-index: -1;
+            top: 35rem;
+            left: 5rem;}
+        @include responsive("phone"){
+            width: 30rem;
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            opacity: 0.6;
+            right: 0;}
+        @include responsive("tablet"){
+            width:30rem;
+            position: absolute;
+            z-index: -1;
+            bottom: 0rem;
+            opacity: 0.9;
+            left: 6rem;}
+        @include responsive ("big-desktop"){
+            width: 35vw;
+            position: absolute;
+            top: 16vw;
+            right: 1rem;}
+        @include responsive ("bigger-desktop"){
+            width: 40vw;
+            position: absolute;
+            top: 25vw;
+            right: 2vw;}
+    }
+}
+
+.temperature-value{
+    text-align: center;
+        font-size: 3vw;
+        color: #fff;
+        font-weight: 700;
+        
+        @include responsive("small-phone"){
+            font-size: 4rem;
+
+            }      
+        @include responsive("phone"){
+            font-size: 6rem;
+            }
+        @include responsive("tablet"){
+            font-size: 5rem;
+            }
+}
+
+.weather-description{
+    font-size: 2vw;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    @include responsive("small-phone"){
+        font-size: 2rem;
+        }
+    @include responsive("phone"){
+        font-size: 2.5rem;
+        }
+    @include responsive("tablet"){
+        font-size: 2.5rem;
+        }
+}
+
+.location{
+    font-size: 2vw;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    @include responsive("small-phone"){
+        font-size: 2rem;
+        }
+    @include responsive("phone"){
+        font-size: 2rem;
+        }
+    @include responsive("tablet"){
+        font-size: 2rem;
+        }
+}
+}
