@@ -7,7 +7,7 @@
     
     &__svg{
         @include responsive("small-phone"){
-            transform: scale(.8);}
+            transform: scale(.7);}
         @include responsive("phone"){
             transform: scale(.8);}
         @include responsive("tablet"){
@@ -29,8 +29,77 @@
 }
 
 
+/*Mobile Map */
+
+.mobileHeader{
+    display: none;
+    @include responsive("small-phone"){
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 10vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    }
+    @include responsive("phone"){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 10vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    }
+    @include responsive("tablet"){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 10vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 2rem;
+        list-style: none;
+        li{
+            font-size: 2rem;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+
+            a{
+                text-decoration: none;
+                color: #333;
+            }
+
+            img{
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+    }
+}
 
 .map{
+    margin-top: 10rem;
     width: calc(100% - 30vw);
     height: 100vh;
     overflow-y: hidden;
@@ -45,18 +114,17 @@
         flex-direction: column;
         height: 90%;
         justify-content: flex-start;
-        gap: 1rem;}
+        }
     @include responsive("phone"){
         width: 100%;
         height: 90%;
         flex-direction: column;
-        gap: 2rem;
+        margin-top: 10rem;
         justify-content: flex-start;}
     @include responsive("tablet"){
         width: 100%;
         height: 90%;
-        flex-direction: column;
-        gap: 2rem;
+        flex-direction: column; 
         justify-content: flex-start;}
 
     h3{
@@ -67,10 +135,10 @@
         text-align: center;
 
         @include responsive("small-phone"){
-            font-size: 3rem;
+            font-size: 2rem;
             }
         @include responsive("phone"){
-            font-size: 10vw;
+            font-size: 3rem;
             }
         @include responsive("tablet"){
             font-size: 12vw;
@@ -88,30 +156,301 @@
         justify-content: center;
         align-items: center;
 
-        .laplandMap{
-            transform: scale(.6);
-        }
-        .turkuMap{
-            transform: scale(.6);
-        }
-        .helsinkiMap{
-            transform: scale(.6);
-        }
-        .tampereMap{
-            transform: scale(.4);
-        }
+        
+
         .ouluMap{
-            transform: scale(.6);
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
+        .laplandMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
+        .joensuuMap{
+            @include responsive("small-phone"){
+                transform: scale(.5);
+            }
+            @include responsive("phone"){
+                transform: scale(.5);
+            }
+            @include responsive("tablet"){
+                transform: scale(.5);
+            }
+        }
+        .jyvaskulaMap{
+            @include responsive("small-phone"){
+                transform: scale(.4);
+            margin-top: -4rem
+            }
+            @include responsive("phone"){
+                transform: scale(.4);
+            margin-top: -4rem
+            }
+            @include responsive("tablet"){
+                transform: scale(.4);
+            margin-top: -4rem
+            }
+            
         }
 
+        .kokkolaMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
+
+        .kuopioMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
+        .kotkaMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
+
+        .kajaniMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
+
+        .hameenlinnaMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
+
+        .alandMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
+        .turkuMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+                margin-top: 2rem;
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+                margin-top: 2rem;
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+                margin-top: 2rem;
+            }
+           
+        }
+        .lahtiMap{
+            @include responsive("small-phone"){
+                transform: scale(.5);
+            margin-top: -4rem;
+            }
+            @include responsive("phone"){
+                transform: scale(.5);
+            margin-top: -4rem;
+            }
+            @include responsive("tablet"){
+                transform: scale(.5);
+            margin-top: -4rem;
+            }
+            
+        }
+        .poriMap{
+            @include responsive("small-phone"){
+                transform: scale(.5);
+            margin-top: -2rem;
+            }
+            @include responsive("phone"){
+                transform: scale(.5);
+                margin-top: -2rem;
+            }
+            @include responsive("tablet"){
+                transform: scale(.5);
+                margin-top: -2rem;
+            }
+            
+        }
+
+        .seinajokiMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
+
+        .mikkeliMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+                margin-top: 2rem;
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            margin-top: 2rem;
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            margin-top: 2rem;
+            }
+            
+        }
+        .kouvolaMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        } 
+        .vaasaMap{
+            @include responsive("small-phone"){
+                transform: scale(.5);
+                margin-top: -2rem;
+            }
+            @include responsive("phone"){
+                transform: scale(.5);
+                margin-top: -2rem;
+            }
+            @include responsive("tablet"){
+                transform: scale(.5);
+                margin-top: -2rem;
+            }
+           
+        }
+        .laperantaMap{
+            @include responsive("small-phone"){
+                transform: scale(.43) rotate(60deg);
+            margin-top: -13rem;
+            &:hover{
+                transform: scale(.5) rotate(60deg);
+            }
+            }
+            @include responsive("phone"){
+                transform: scale(.43) rotate(60deg);
+            margin-top: -13rem;
+            &:hover{
+                transform: scale(.5) rotate(60deg);
+            }
+            }
+            @include responsive("tablet"){
+                transform: scale(.43) rotate(60deg);
+            margin-top: -13rem;
+            &:hover{
+                transform: scale(.5) rotate(60deg);
+            }
+            }
+            
+        }
+        .helsinkiMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            margin-top: 2rem;
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            margin-top: 2rem;
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            margin-top: 2rem;
+            }
+            
+        }
+        .tampereMap{
+            @include responsive("small-phone"){
+                transform: scale(.5);
+                margin-top: -3rem;
+            }
+            @include responsive("phone"){
+                transform: scale(.5);
+            margin-top: -3rem;
+            }
+            @include responsive("tablet"){
+                transform: scale(.5);
+                margin-top: -3rem;
+            }
+            
+        }
+        .ouluMap{
+            @include responsive("small-phone"){
+                transform: scale(.6);
+            }
+            @include responsive("phone"){
+                transform: scale(.6);
+            }
+            @include responsive("tablet"){
+                transform: scale(.6);
+            }
+        }
 
 
 
         transform: scale(1.5);
+        
         @include responsive("small-phone"){
-        margin-top: 1rem;}
+            margin: 0;
+        }
         @include responsive("phone"){
-        margin-top: 3rem;
+            margin-top: 0rem;
         }
         @include responsive("tablet"){
         margin-top: 0rem;}    
@@ -141,7 +480,7 @@
 /* Regions */
 
 .regionMap{
-    
+    margin-top: 1rem;
     cursor: pointer;
     transition: all .3s ease-in-out;
     width: 100%;
@@ -161,11 +500,11 @@
     &:hover{
         
         @include responsive("small-phone"){
-            transform: scale(1.2);}
+            transform: scale(.7);}
         @include responsive("phone"){
-                transform: scale(1.2);}
+                transform: scale(.7);}
         @include responsive("tablet"){
-                transform: scale(1.3);}            
+                transform: scale(.8);}            
         transform: scale(1.1);
         transition: all .3s ease-in-out;
     }
@@ -177,20 +516,18 @@
     background-color: transparent;
     border-left: 1vw dashed #333;
     position: absolute;
-    bottom: 10vw;
-    right: 60vw;
     animation: dotLine 2s normal;
     animation-fill-mode: forwards;
     animation-delay: 2s;
-    @include responsive("small-phone"){
-        bottom: 8rem;
-        left: 10rem;}
-    @include responsive("phone"){
-        left: 13rem;
-        bottom: 10rem;}
-    @include responsive("tablet"){
-        left: 15rem;
-        bottom: 12rem;}
+    // @include responsive("small-phone"){
+    //     bottom: 8rem;
+    //     left: 10rem;}
+    // @include responsive("phone"){
+    //     left: 13rem;
+    //     bottom: 10rem;}
+    // @include responsive("tablet"){
+    //     left: 15rem;
+    //     bottom: 12rem;}
 
     
 
@@ -200,16 +537,16 @@
         font-size: 3vw;
         -webkit-text-stroke: 1px #000000;
         @include responsive("small-phone"){
-            font-size: 2.5rem;
+            font-size: 2rem;
             position: absolute;
-            left: 2rem;
-            bottom: -1.5rem;}
+            left: -3rem;
+            bottom:1.3rem;}
         @include responsive("phone"){
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             position: absolute;
-            left: 2rem;
-            bottom:-1rem;}
+            left: -3rem;
+            bottom:1.3rem;}
         @include responsive("tablet"){
             font-size: 3rem;
             font-weight: 700;
@@ -254,7 +591,7 @@
 
 
 .weather{
-    width: 50%;
+    width: 100%;
     height: 25vw;
     display: flex;
     justify-content: center;
@@ -263,9 +600,9 @@
 
 
     @include responsive("small-phone"){ 
-        margin-top:7rem ;}
-    @include responsive("phone"){
         margin-top:1rem ;}
+    @include responsive("phone"){
+        margin-top:4rem ;}
     @include responsive("tablet"){
         margin-top: -2rem ;}
 }
@@ -275,12 +612,17 @@
     img{
         width: 20vw;
         @include responsive("small-phone"){
-            width: 16rem;
+            width: 25rem;
+            position: absolute;
+            z-index: -1;
+            top: 32rem;
+            left: 5rem;
            }
         @include responsive("phone"){
-            width: 40rem;
+            width: 38rem;
             position: absolute;
-            top: 42rem;
+            z-index: -1;
+            top: 35rem;
             left: 5rem;
             }
         @include responsive("tablet"){
@@ -314,6 +656,7 @@
 
 .weather-description{
     font-size: 2vw;
+    width: 100%;
     color: #fff;
     font-weight: 700;
     text-transform: capitalize;
@@ -322,7 +665,7 @@
         font-size: 2rem;
         }
     @include responsive("phone"){
-        font-size: 3rem;
+        font-size: 2.5rem;
         }
     @include responsive("tablet"){
         font-size: 2.5rem;

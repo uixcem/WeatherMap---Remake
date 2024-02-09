@@ -295,7 +295,7 @@ nav {
   height: 100vh; }
   @media (max-width: 320px) {
     .finlandMap__svg {
-      transform: scale(0.8); } }
+      transform: scale(0.7); } }
   @media (min-width: 321px) and (max-width: 376px) {
     .finlandMap__svg {
       transform: scale(0.8); } }
@@ -310,7 +310,68 @@ nav {
     .finlandMap__svg path:hover {
       fill: #fff; }
 
+/*Mobile Map */
+.mobileHeader {
+  display: none; }
+  @media (max-width: 320px) {
+    .mobileHeader {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      height: 10vh;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); } }
+  @media (min-width: 321px) and (max-width: 376px) {
+    .mobileHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 10vh;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); } }
+  @media (min-width: 377px) and (max-width: 600px) {
+    .mobileHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 10vh;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); } }
+  .mobileHeader ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+    list-style: none; }
+    .mobileHeader ul li {
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer; }
+      .mobileHeader ul li a {
+        text-decoration: none;
+        color: #333; }
+      .mobileHeader ul li img {
+        width: 5rem;
+        height: 5rem; }
+
 .map {
+  margin-top: 10rem;
   width: calc(100% - 30vw);
   height: 100vh;
   overflow-y: hidden;
@@ -324,21 +385,19 @@ nav {
       width: 100%;
       flex-direction: column;
       height: 90%;
-      justify-content: flex-start;
-      gap: 1rem; } }
+      justify-content: flex-start; } }
   @media (min-width: 321px) and (max-width: 376px) {
     .map {
       width: 100%;
       height: 90%;
       flex-direction: column;
-      gap: 2rem;
+      margin-top: 10rem;
       justify-content: flex-start; } }
   @media (min-width: 377px) and (max-width: 600px) {
     .map {
       width: 100%;
       height: 90%;
       flex-direction: column;
-      gap: 2rem;
       justify-content: flex-start; } }
   .map h3 {
     color: #fff;
@@ -348,10 +407,10 @@ nav {
     text-align: center; }
     @media (max-width: 320px) {
       .map h3 {
-        font-size: 3rem; } }
+        font-size: 2rem; } }
     @media (min-width: 321px) and (max-width: 376px) {
       .map h3 {
-        font-size: 10vw; } }
+        font-size: 3rem; } }
     @media (min-width: 377px) and (max-width: 600px) {
       .map h3 {
         font-size: 12vw; } }
@@ -362,22 +421,234 @@ nav {
     justify-content: center;
     align-items: center;
     transform: scale(1.5); }
-    .map__svg .laplandMap {
-      transform: scale(0.6); }
-    .map__svg .turkuMap {
-      transform: scale(0.6); }
-    .map__svg .helsinkiMap {
-      transform: scale(0.6); }
-    .map__svg .tampereMap {
-      transform: scale(0.4); }
-    .map__svg .ouluMap {
-      transform: scale(0.6); }
+    @media (max-width: 320px) {
+      .map__svg .ouluMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .ouluMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .ouluMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .laplandMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .laplandMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .laplandMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .joensuuMap {
+        transform: scale(0.5); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .joensuuMap {
+        transform: scale(0.5); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .joensuuMap {
+        transform: scale(0.5); } }
+    @media (max-width: 320px) {
+      .map__svg .jyvaskulaMap {
+        transform: scale(0.4);
+        margin-top: -4rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .jyvaskulaMap {
+        transform: scale(0.4);
+        margin-top: -4rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .jyvaskulaMap {
+        transform: scale(0.4);
+        margin-top: -4rem; } }
+    @media (max-width: 320px) {
+      .map__svg .kokkolaMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .kokkolaMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .kokkolaMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .kuopioMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .kuopioMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .kuopioMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .kotkaMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .kotkaMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .kotkaMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .kajaniMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .kajaniMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .kajaniMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .hameenlinnaMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .hameenlinnaMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .hameenlinnaMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .alandMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .alandMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .alandMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .turkuMap {
+        transform: scale(0.6);
+        margin-top: 2rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .turkuMap {
+        transform: scale(0.6);
+        margin-top: 2rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .turkuMap {
+        transform: scale(0.6);
+        margin-top: 2rem; } }
+    @media (max-width: 320px) {
+      .map__svg .lahtiMap {
+        transform: scale(0.5);
+        margin-top: -4rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .lahtiMap {
+        transform: scale(0.5);
+        margin-top: -4rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .lahtiMap {
+        transform: scale(0.5);
+        margin-top: -4rem; } }
+    @media (max-width: 320px) {
+      .map__svg .poriMap {
+        transform: scale(0.5);
+        margin-top: -2rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .poriMap {
+        transform: scale(0.5);
+        margin-top: -2rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .poriMap {
+        transform: scale(0.5);
+        margin-top: -2rem; } }
+    @media (max-width: 320px) {
+      .map__svg .seinajokiMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .seinajokiMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .seinajokiMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .mikkeliMap {
+        transform: scale(0.6);
+        margin-top: 2rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .mikkeliMap {
+        transform: scale(0.6);
+        margin-top: 2rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .mikkeliMap {
+        transform: scale(0.6);
+        margin-top: 2rem; } }
+    @media (max-width: 320px) {
+      .map__svg .kouvolaMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .kouvolaMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .kouvolaMap {
+        transform: scale(0.6); } }
+    @media (max-width: 320px) {
+      .map__svg .vaasaMap {
+        transform: scale(0.5);
+        margin-top: -2rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .vaasaMap {
+        transform: scale(0.5);
+        margin-top: -2rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .vaasaMap {
+        transform: scale(0.5);
+        margin-top: -2rem; } }
+    @media (max-width: 320px) {
+      .map__svg .laperantaMap {
+        transform: scale(0.43) rotate(60deg);
+        margin-top: -13rem; }
+        .map__svg .laperantaMap:hover {
+          transform: scale(0.5) rotate(60deg); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .laperantaMap {
+        transform: scale(0.43) rotate(60deg);
+        margin-top: -13rem; }
+        .map__svg .laperantaMap:hover {
+          transform: scale(0.5) rotate(60deg); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .laperantaMap {
+        transform: scale(0.43) rotate(60deg);
+        margin-top: -13rem; }
+        .map__svg .laperantaMap:hover {
+          transform: scale(0.5) rotate(60deg); } }
+    @media (max-width: 320px) {
+      .map__svg .helsinkiMap {
+        transform: scale(0.6);
+        margin-top: 2rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .helsinkiMap {
+        transform: scale(0.6);
+        margin-top: 2rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .helsinkiMap {
+        transform: scale(0.6);
+        margin-top: 2rem; } }
+    @media (max-width: 320px) {
+      .map__svg .tampereMap {
+        transform: scale(0.5);
+        margin-top: -3rem; } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .tampereMap {
+        transform: scale(0.5);
+        margin-top: -3rem; } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .tampereMap {
+        transform: scale(0.5);
+        margin-top: -3rem; } }
+    @media (max-width: 320px) {
+      .map__svg .ouluMap {
+        transform: scale(0.6); } }
+    @media (min-width: 321px) and (max-width: 376px) {
+      .map__svg .ouluMap {
+        transform: scale(0.6); } }
+    @media (min-width: 377px) and (max-width: 600px) {
+      .map__svg .ouluMap {
+        transform: scale(0.6); } }
     @media (max-width: 320px) {
       .map__svg {
-        margin-top: 1rem; } }
+        margin: 0; } }
     @media (min-width: 321px) and (max-width: 376px) {
       .map__svg {
-        margin-top: 3rem; } }
+        margin-top: 0rem; } }
     @media (min-width: 377px) and (max-width: 600px) {
       .map__svg {
         margin-top: 0rem; } }
@@ -395,6 +666,7 @@ nav {
 
 /* Regions */
 .regionMap {
+  margin-top: 1rem;
   cursor: pointer;
   transition: all .3s ease-in-out;
   width: 100%; }
@@ -403,13 +675,13 @@ nav {
     transition: all .3s ease-in-out; }
     @media (max-width: 320px) {
       .regionMap:hover {
-        transform: scale(1.2); } }
+        transform: scale(0.7); } }
     @media (min-width: 321px) and (max-width: 376px) {
       .regionMap:hover {
-        transform: scale(1.2); } }
+        transform: scale(0.7); } }
     @media (min-width: 377px) and (max-width: 600px) {
       .regionMap:hover {
-        transform: scale(1.3); } }
+        transform: scale(0.8); } }
 
 .dottedLine {
   width: .1vw;
@@ -417,23 +689,9 @@ nav {
   background-color: transparent;
   border-left: 1vw dashed #333;
   position: absolute;
-  bottom: 10vw;
-  right: 60vw;
   animation: dotLine 2s normal;
   animation-fill-mode: forwards;
   animation-delay: 2s; }
-  @media (max-width: 320px) {
-    .dottedLine {
-      bottom: 8rem;
-      left: 10rem; } }
-  @media (min-width: 321px) and (max-width: 376px) {
-    .dottedLine {
-      left: 13rem;
-      bottom: 10rem; } }
-  @media (min-width: 377px) and (max-width: 600px) {
-    .dottedLine {
-      left: 15rem;
-      bottom: 12rem; } }
   .dottedLine a {
     text-decoration: none;
     color: #fff;
@@ -441,17 +699,17 @@ nav {
     -webkit-text-stroke: 1px #000000; }
     @media (max-width: 320px) {
       .dottedLine a {
-        font-size: 2.5rem;
+        font-size: 2rem;
         position: absolute;
-        left: 2rem;
-        bottom: -1.5rem; } }
+        left: -3rem;
+        bottom: 1.3rem; } }
     @media (min-width: 321px) and (max-width: 376px) {
       .dottedLine a {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 700;
         position: absolute;
-        left: 2rem;
-        bottom: -1rem; } }
+        left: -3rem;
+        bottom: 1.3rem; } }
     @media (min-width: 377px) and (max-width: 600px) {
       .dottedLine a {
         font-size: 3rem;
@@ -482,7 +740,7 @@ nav {
     left: -2vw; }
 
 .weather {
-  width: 50%;
+  width: 100%;
   height: 25vw;
   display: flex;
   justify-content: center;
@@ -490,10 +748,10 @@ nav {
   flex-direction: column; }
   @media (max-width: 320px) {
     .weather {
-      margin-top: 7rem; } }
+      margin-top: 1rem; } }
   @media (min-width: 321px) and (max-width: 376px) {
     .weather {
-      margin-top: 1rem; } }
+      margin-top: 4rem; } }
   @media (min-width: 377px) and (max-width: 600px) {
     .weather {
       margin-top: -2rem; } }
@@ -502,12 +760,17 @@ nav {
   width: 20vw; }
   @media (max-width: 320px) {
     .weather-icon img {
-      width: 16rem; } }
+      width: 25rem;
+      position: absolute;
+      z-index: -1;
+      top: 32rem;
+      left: 5rem; } }
   @media (min-width: 321px) and (max-width: 376px) {
     .weather-icon img {
-      width: 40rem;
+      width: 38rem;
       position: absolute;
-      top: 42rem;
+      z-index: -1;
+      top: 35rem;
       left: 5rem; } }
   @media (min-width: 377px) and (max-width: 600px) {
     .weather-icon img {
@@ -533,6 +796,7 @@ nav {
 
 .weather-description {
   font-size: 2vw;
+  width: 100%;
   color: #fff;
   font-weight: 700;
   text-transform: capitalize;
@@ -542,7 +806,7 @@ nav {
       font-size: 2rem; } }
   @media (min-width: 321px) and (max-width: 376px) {
     .weather-description {
-      font-size: 3rem; } }
+      font-size: 2.5rem; } }
   @media (min-width: 377px) and (max-width: 600px) {
     .weather-description {
       font-size: 2.5rem; } }
