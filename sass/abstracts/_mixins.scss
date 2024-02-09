@@ -11,6 +11,9 @@
     } @else if $device == "desktop" {
       @media (min-width: 901px) and (max-width: 1200px) { @content; }
     } @else if $device == "big-desktop" {
-      @media (min-width: 1201px) { @content; }
+      @media (min-width: 1201px) and (max-width: 1600px) { @content; }
+    } @else if $device == "bigger-desktop" {
+      @media (min-width: 1601px) 
+      { @content; }
     }
   }
