@@ -13,7 +13,9 @@
         @include responsive("tablet"){
             transform: scale(.8);}
         @include responsive("tablet-landscape"){
-            transform: scale(.6);}
+            transform: scale(.8);}
+        @include responsive("desktop"){
+            transform: scale(.8);}
         @include responsive("big-desktop"){
             transform: scale(.8);}
        @include responsive("bigger-desktop"){
@@ -135,6 +137,15 @@
         flex-direction: column;
         gap: 5rem;
         }
+    @include responsive("tablet-landscape"){
+        width: 100%;
+        height: 90%;
+        }
+    @include responsive("desktop"){
+        width: 100%;
+        height: 90%;
+        justify-content: space-around;
+        }
     @include responsive("big-desktop"){
         width: 100%;
         height: 90%;}
@@ -159,6 +170,18 @@
         @include responsive("tablet"){
             font-size:10vw;
             }
+        @include responsive("tablet-landscape"){
+            font-size: 7vw;
+            position: absolute;
+            top: 1vw;
+            left: -2vw;
+            text-align: right;}
+        @include responsive("desktop"){
+            font-size: 7vw;
+            position: absolute;
+            top: 1vw;
+            left: -2vw;
+            text-align: right;}
         @include responsive("big-desktop"){
             font-size: 7vw;
             position: absolute;
@@ -199,6 +222,7 @@
 
           }
         
+          
 
           .jyvaskulaMap{
             @include responsive("small-phone"){
@@ -218,6 +242,9 @@
             @include responsive("tablet-landscape"){
                 width: 100%;
                 height: 100%; }
+                @include responsive("desktop"){
+                    width: 100%;
+                    height: 100%;}
                 @include responsive("big-desktop"){
                     width: 60%;
                     height: 40%;
@@ -245,6 +272,9 @@
                 @include responsive("tablet-landscape"){
                     width: 100%;
                     height: 100%; }
+                    @include responsive("desktop"){
+                        width: 100%;
+                        height: 100%;}
                     @include responsive("big-desktop"){
                         width: 60%;
                         height: 40%;
@@ -272,6 +302,9 @@
                     @include responsive("tablet-landscape"){
                         width: 100%;
                         height: 100%; }
+                        @include responsive("desktop"){
+                            width: 100%;
+                            height: 100%;}
                         @include responsive("big-desktop"){
                             width: 60%;
                             height: 40%;
@@ -299,6 +332,9 @@
                         @include responsive("tablet-landscape"){
                             width: 100%;
                             height: 100%; }
+                            @include responsive("desktop"){
+                                width: 100%;
+                                height: 100%;}
                             @include responsive("big-desktop"){
                                 width: 60%;
                                 height: 40%;
@@ -326,6 +362,9 @@
                             @include responsive("tablet-landscape"){
                                 width: 100%;
                                 height: 100%; }
+                                @include responsive("desktop"){
+                                    width: 100%;
+                                    height: 100%;}    
                                 @include responsive("big-desktop"){
                                     width: 60%;
                                     height: 40%;
@@ -353,16 +392,34 @@
                             @include responsive("tablet-landscape"){
                                 width: 100%;
                                 height: 100%; }
-                                @include responsive("big-desktop"){
-                                    width: 60%;
-                                    height: 40%;
-                                    }
+                            @include responsive("desktop"){
+                                width: 100%;
+                                height: 100%;}
+                            @include responsive("big-desktop"){
+                                width: 60%;
+                                height: 40%;}
                             @include responsive("bigger-desktop"){
                                 width: 60%;
                                 height: 100%;}
                             }
+
+                            .mikkeliMap{
+                                @include responsive("phone"){
+                                    margin-top: 5rem;
+                                    }
+                            }
           
-          
+                            .helsinkiMap{
+                                @include responsive("phone"){
+                                    margin-top: 5rem;
+                                    }
+                              }
+
+                            .hameenlinnaMap{
+                                @include responsive("phone"){
+                                    margin-top: 5rem;
+                                    }
+                              }
           
           
           
@@ -391,7 +448,10 @@
                 align-self: flex-start; }
             @include responsive("tablet-landscape"){
                 width: 100%;
-                height: 100%; }
+                height: 100%; }    
+            @include responsive("desktop"){
+                width: 100%;
+                height: 100%;}
             @include responsive("big-desktop"){
                 width: 100%;
                 height: 100%;}
@@ -421,15 +481,36 @@
     animation: dotLine 2s normal;
     animation-fill-mode: forwards;
     animation-delay: 2s;
-    // @include responsive("small-phone"){
-    //     bottom: 8rem;
-    //     left: 10rem;}
-    // @include responsive("phone"){
-    //     left: 13rem;
-    //     bottom: 10rem;}
+
+    @include responsive("small-phone"){
+        bottom: 50%;
+        left: 40%;
+        }
+    @include responsive("phone"){
+        bottom: 55%;
+        left: 40%;
+        }
+    @include responsive("tablet"){
+        bottom: 50%;
+        left: 40%;
+        }
+    @include responsive("tablet-landscape"){
+        bottom: 50%;
+        left: 40%;
+        }
+    @include responsive("desktop"){
+        bottom: 50%;
+        left: 40%;
+        }
+    @include responsive("big-desktop"){
+        bottom: 43%;
+        left: 40%;
+        }
     @include responsive("bigger-desktop"){
-        left: 15rem;
-      bottom: 12rem;}
+        bottom: 45%;
+        left: 45%;
+        }    
+    
 
     
 
@@ -455,6 +536,18 @@
             position: absolute;
             left: 2rem;
             bottom: -2rem;}
+        @include responsive("big-desktop"){
+            font-size: 3vw;
+            font-weight: 700;
+            position: absolute;
+            left: 5vw;
+            bottom: -5vw;}
+        @include responsive("bigger-desktop"){
+            font-size: 3vw;
+            font-weight: 700;
+            position: absolute;
+            left: 5vw;
+            bottom: -5vw;}
     }
 
     p{
@@ -535,7 +628,7 @@
             position: absolute;
             z-index: -1;
             bottom: 0rem;
-            opacity: 0.9;
+            opacity: 0.6;
             left: 6rem;}
         @include responsive ("big-desktop"){
             width: 35vw;
@@ -546,7 +639,7 @@
             width: 40vw;
             position: absolute;
             top: 25vw;
-            right: 2vw;}
+            right: -8vw;}
     }
 }
 
