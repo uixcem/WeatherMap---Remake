@@ -160,6 +160,12 @@ body {
   @media (min-width: 901px) and (max-width: 1200px) {
     .mobile-logo {
       display: none; } }
+  @media (min-width: 1201px) and (max-width: 1600px) {
+    .mobile-logo {
+      display: none; } }
+  @media (min-width: 1601px) {
+    .mobile-logo {
+      display: none; } }
   .mobile-logo img {
     width: 8rem;
     height: 8rem; }

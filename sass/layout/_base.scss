@@ -138,9 +138,9 @@ body{
         display: none;}
     @include responsive("desktop"){
         display: none;}
-    @include responsive("desktop-big"){
+    @include responsive("big-desktop"){
         display: none;}
-    @include responsive("desktop-bigger"){
+    @include responsive("bigger-desktop"){
         display: none;}
     img{
         width: 8rem;
