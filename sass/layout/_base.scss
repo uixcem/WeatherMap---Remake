@@ -24,6 +24,18 @@ body{
     bottom: 20vw;
     right: 1vw;
     transform: rotate(-90deg);
+
+    @include responsive("small-phone") {
+        display: none;
+      }
+    
+      @include responsive("phone") {
+        display: none;
+      }
+    
+      @include responsive("tablet") {
+        display: none;
+      }
     
 
     &__mark {
@@ -112,6 +124,27 @@ body{
             width: 100%;
             transition: ease-in-out .3s;
         }
+    }
+
+}
+
+
+.mobile-logo{
+    position: absolute;
+    left: 3rem;
+    bottom: 45%;
+    display: block;
+    @include responsive("tablet-landscape"){
+        display: none;}
+    @include responsive("desktop"){
+        display: none;}
+    @include responsive("desktop-big"){
+        display: none;}
+    @include responsive("desktop-bigger"){
+        display: none;}
+    img{
+        width: 8rem;
+        height: 8rem;
     }
 
 }

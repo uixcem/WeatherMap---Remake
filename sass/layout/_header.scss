@@ -14,7 +14,19 @@ $animationDuration: $totalDuration / 8;
     align-items: center;
     flex-direction: row;
     overflow: hidden;
+
+    @include responsive("tablet-landscape"){
+        gap: 10vw;
+    }
+    @include responsive("desktop"){
+        gap: 10vw;
+    }
+
+
+
 }
+
+
 
 
 .sidebar{
@@ -96,11 +108,15 @@ $animationDuration: $totalDuration / 8;
     transform: rotate(-90deg);
     transition: ease all 1s;
     @include responsive("small-phone"){
-        display: none;}
-        @include responsive("phone"){
-            display: none;}
-        @include responsive("tablet"){
-            display: none;}
+        display: inline-block;}
+    @include responsive("phone"){
+        display:block;
+        bottom: 30rem;
+        left: 10rem;
+        z-index: 1111;
+        transform: rotate(0);}
+    @include responsive("tablet"){
+        display: block;}
     
 
     &:hover{
@@ -109,7 +125,7 @@ $animationDuration: $totalDuration / 8;
         transition: ease all 1s;}
 
     img{
-        width: 6vw;
+        width:  6vw;
     }
 }
 
