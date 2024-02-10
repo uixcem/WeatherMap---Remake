@@ -175,19 +175,6 @@ body {
   align-items: center;
   flex-direction: row;
   overflow: hidden; }
-  .container .mobile-logo {
-    position: absolute;
-    left: 3rem;
-    display: block; }
-    @media (min-width: 601px) and (max-width: 900px) {
-      .container .mobile-logo {
-        display: none; } }
-    @media (min-width: 901px) and (max-width: 1200px) {
-      .container .mobile-logo {
-        display: none; } }
-    .container .mobile-logo img {
-      width: 8rem;
-      height: 8rem; }
   @media (min-width: 601px) and (max-width: 900px) {
     .container {
       gap: 10vw; } }
